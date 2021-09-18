@@ -1,0 +1,27 @@
+{
+  "name": "test-segw-service-cex",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Mirror https://github.com/gregorwolf/abapGitTestSEGWservice to /CEX/ namespace",
+  "main": "index.js",
+  "scripts": {
+    "clone": "rm -rf input && git clone https://github.com/gregorwolf/abapGitTestSEGWservice input",
+    "lint_result": "abaplint input/abaplint.json",
+    "fix_result": "abaplint abaplint.json --fix",
+    "rename": "abaplint abaplint_rename.json --rename && rm src/* && cp output/input/src/* src/",
+    "mirror": "rm -rf output && npm run clone && npm run rename"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abapGit/ajson_mirror.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abapGit/ajson_mirror/issues"
+  },
+  "homepage": "https://github.com/abapGit/ajson_mirror#readme",
+  "dependencies": {
+    "@abaplint/cli": "^2.79.3"
+  }
+}
