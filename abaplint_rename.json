@@ -1,6 +1,6 @@
 {
   "global": {
-    "files": "/input/src/**/*.*",
+    "files": "/src/**/*.*",
     "exclude": [],
     "skipGeneratedGatewayClasses": true,
     "skipGeneratedPersistentClasses": true,
@@ -21,7 +21,7 @@
       {
         "type": "CLAS|INTF",
         "oldName": "z(.*)zepm_bp",
-        "newName": "/cex/$zepm_bp"
+        "newName": "/cex/epm_bp"
       }
     ]
   },
@@ -237,7 +237,7 @@
     },
     "empty_structure": {
       "exclude": [],
-      "severity": "Error",
+      "severity": "Warning",
       "loop": true,
       "if": true,
       "while": true,

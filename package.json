@@ -5,10 +5,9 @@
   "description": "Mirror https://github.com/gregorwolf/abapGitTestSEGWservice to /CEX/ namespace",
   "main": "index.js",
   "scripts": {
-    "clone": "rm -rf input && git clone https://github.com/gregorwolf/abapGitTestSEGWservice input",
-    "lint_result": "abaplint input/abaplint.json",
+    "clone": "rm -rf src && git clone https://github.com/gregorwolf/abapGitTestSEGWservice input && mv input/src . && rm -rf input",
     "fix_result": "abaplint abaplint.json --fix",
-    "rename": "abaplint abaplint_rename.json --rename && rm src/* && cp output/input/src/* src/",
+    "rename": "abaplint abaplint_rename.json --rename && rm -rf src/* && cp output/src/* src/",
     "mirror": "rm -rf output && npm run clone && npm run rename"
   },
   "repository": {
